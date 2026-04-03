@@ -24,81 +24,50 @@
 %----------------------------------------------------------------------------------------
 %	DOCUMENT DEFINITION
 %----------------------------------------------------------------------------------------
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+%	The MIT License (MIT)
+%
+%	Copyright (c) 2021 Jitin Nair
+%
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
 
-% article class because we want to fully customize the page and not use a cv template
-\documentclass[a4paper,12pt]{article}
+\documentclass[a4paper, 10pt]{article}
 
-%----------------------------------------------------------------------------------------
-%	FONT
-%----------------------------------------------------------------------------------------
-
-% % fontspec allows you to use TTF/OTF fonts directly
-% \usepackage{fontspec}
-% \defaultfontfeatures{Ligatures=TeX}
-
-% % modified for ShareLaTeX use
-% \setmainfont[
-% SmallCapsFont = Fontin-SmallCaps.otf,
-% BoldFont = Fontin-Bold.otf,
-% ItalicFont = Fontin-Italic.otf
-% ]
-% {Fontin.otf}
-
-%----------------------------------------------------------------------------------------
-%	PACKAGES
-%----------------------------------------------------------------------------------------
 \usepackage{url}
 \usepackage{parskip} 	
 
-%other packages for formatting
 \RequirePackage{color}
 \RequirePackage{graphicx}
 \usepackage[usenames,dvipsnames]{xcolor}
-\usepackage[scale=0.9]{geometry}
+\usepackage[scale=0.914]{geometry}
 
-%tabularx environment
 \usepackage{tabularx}
-
-%for lists within experience section
 \usepackage{enumitem}
 
-% centered version of 'X' col. type
 \newcolumntype{C}{>{\centering\arraybackslash}X} 
 
-%to prevent spillover of tabular into next pages
 \usepackage{supertabular}
 \usepackage{tabularx}
 \newlength{\fullcollw}
 \setlength{\fullcollw}{0.47\textwidth}
 
-%custom \section
 \usepackage{titlesec}				
 \usepackage{multicol}
 \usepackage{multirow}
 
-%CV Sections inspired by: 
-%http://stefano.italians.nl/archives/26
-\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titleformat{\section}{\Large\scshape\raggedright}{}{1em}{}[\titlerule]
 \titlespacing{\section}{0pt}{10pt}{10pt}
 
-%for publications
 \usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
 
-%Setup hyperref package, and colours for links
 \usepackage[unicode, draft=false]{hyperref}
 \definecolor{linkcolour}{rgb}{0,0.2,0.6}
 \hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
 \addbibresource{citations.bib}
 \setlength\bibitemsep{1em}
 
-%for social icons
 \usepackage{fontawesome5}
 
-%debug page outer frames
-%\usepackage{showframe}
-
-
-% job listing environments
 \newenvironment{jobshort}[2]
     {
     \begin{tabularx}{\linewidth}{@{}l X r@{}}
@@ -111,107 +80,82 @@
 \newenvironment{joblong}[2]
     {
     \begin{tabularx}{\linewidth}{@{}l X r@{}}
-    \textbf{#1} & \hfill &  #2 \\[3.75pt]
+    \textbf{#1} & \hfill &  #2 \\[3pt]
     \end{tabularx}
     \begin{minipage}[t]{\linewidth}
-    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt,label=--]
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=5pt,label=--]
     }
     {
     \end{itemize}
     \end{minipage}    
     }
 
-
-
-%----------------------------------------------------------------------------------------
-%	BEGIN DOCUMENT
-%----------------------------------------------------------------------------------------
 \begin{document}
 
-% non-numbered pages
 \pagestyle{empty} 
 
-%----------------------------------------------------------------------------------------
-%	TITLE
-%----------------------------------------------------------------------------------------
-
-% \begin{tabularx}{\linewidth}{ @{}X X@{} }
-% \huge{Your Name}\vspace{2pt} & \hfill \emoji{incoming-envelope} email@email.com \\
-% \raisebox{-0.05\height}\faGithub\ username \ | \
-% \raisebox{-0.00\height}\faLinkedin\ username \ | \ \raisebox{-0.05\height}\faGlobe \ mysite.com  & \hfill \emoji{calling} number
-% \end{tabularx}
-
 \begin{tabularx}{\linewidth}{@{} C @{}}
-\Huge{Your Name} \\[7.5pt]
-\href{https://github.com/username}{\raisebox{-0.05\height}\faGithub\ username} \ $|$ \ 
-\href{https://linkedin.com/in/username}{\raisebox{-0.05\height}\faLinkedin\ username} \ $|$ \ 
-\href{https://mysite.com}{\raisebox{-0.05\height}\faGlobe \ mysite.com} \ $|$ \ 
-\href{mailto:email@mysite.com}{\raisebox{-0.05\height}\faEnvelope \ email@mysite.com} \ $|$ \ 
-\href{tel:+000000000000}{\raisebox{-0.05\height}\faMobile \ +00.00.000.000} \\
+\Huge{Shirley Katherine Maldonado} \\[3pt]
+{Data Analyst $|$ Data Scientist}\\[2pt]
+\href{https://www.linkedin.com/in/katherine-maldonado-64424b205/}{\raisebox{-0.05\height}\faLinkedin\ Shirley Maldonado} \ $|$ \ 
+\href{mailto:kathe.meza.27@gmail.com}{\raisebox{-0.05\height}\faEnvelope \ kathe.meza.27@gmail.com} \ $|$ \ 
+\href{tel:+57 3209593820}{\raisebox{-0.05\height}\faMobile \ +57 3209593820}\ $|$ \ \href{tel:+57 3209593820}{\raisebox{-0.05\height}\faMobile \ +57 3249176840} \\
 \end{tabularx}
 
-%----------------------------------------------------------------------------------------
-% EXPERIENCE SECTIONS
-%----------------------------------------------------------------------------------------
+\section{Profile}
+Data analyst and data scientist with a background in Astronomy, hands-on experience in the retail sector, and C1-level English proficiency. I work primarily in Python, R, SQL, and Excel for data extraction, transformation, and modeling, and in Power BI to communicate results to business audiences. My approach combines statistical rigor with the ability to translate technical findings into actionable decisions.
+\href{https://kikikath.github.io/Hoja-de-Vida/cv.pdf}{Download link}
 
-%Interests/ Keywords/ Summary
-\section{Summary}
-This CV can also be automatically compiled and published using GitHub Actions. For details, \href{https://github.com/jitinnair1/autoCV}{click here}.
+\section{Technical Skills}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+Programming:  &  \normalsize{Python, R, SQL.}\\
+Databases:    &  \normalsize{MySQL, SAS.}\\
+Visualization: &  \normalsize{Power BI, Matplotlib, Seaborn, Qualtrics.}\\
+Libraries:    &  \normalsize{Pandas, NumPy, scikit-learn, TensorFlow, Keras, Matplotlib, Seaborn.}\\
+Machine Learning: &  \normalsize{Histogram Gradient Boosting, Regression, Classification, Decision Trees, SHAP values, permutation importance for interpretability.}\\  
+Statistical Methods: &  \normalsize{PCA, Multiple Correspondence Analysis (MCA), causal discovery.}\\
+\end{tabularx}
 
-%Experience
 \section{Work Experience}
 
-\begin{jobshort}{Designation}{Jan 2021 - present}
-long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width
-\end{jobshort}
+\begin{joblong}{Market Research \& Data Science Intern}{Grupo Éxito}
 
-
-\begin{joblong}{Designation}{Mar 2019 - Jan 2021}
-\item long long line of blah blah that will wrap when the table fills the column width
-\item again, long long line of blah blah that will wrap when the table fills the column width but this time even more long long line of blah blah. again, long long line of blah blah that will wrap when the table fills the column width but this time even more long long line of blah blah
+\item Developed an omnichannel NPS predictive model using Gradient Boosting (R² between 0.63 and 0.79 on the test set), identifying on-time product delivery as the primary driver of customer satisfaction and loyalty. Results were presented to the team and adopted as an operational prioritization framework.
+\item Optimized the customer experience survey through PCA and correlation analysis, identifying redundant or low-variance items (such as available payment methods and staff knowledge) whose removal reduces response burden without loss of explanatory power (variance explained by Moment of Truth: $75$--$85\%$).
+\item Designed a brand reputation analysis using ordinal logistic regression (instead of the standard permutation importance approach) to quantify the impact of each variable on consumer trust. This methodological choice, proposed by me and validated by the team, yielded directly interpretable weights that were aggregated at the driver level and translated into a performance-vs.-impact chart consistent across audiences and levels of analysis.
+\item Analyzed Nielsen data for competitive benchmarking and supported the Data Science team in brand perception metrics.
 \end{joblong}
   
-%Projects
 \section{Projects}
 
 \begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{Some Project} & \hfill \href{https://some-link.com}{Link to Demo} \\[3.75pt]
-\multicolumn{2}{@{}X@{}}{long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width}  \\
+\textbf{Time Series Analysis and Electricity Price Forecasting} & \hfill \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{Academic team project in which we processed historical data from XM and built LSTM models in TensorFlow/Keras to forecast the kWh price in the short and medium term.}  \\
 \end{tabularx}
 
-%----------------------------------------------------------------------------------------
-%	EDUCATION
-%----------------------------------------------------------------------------------------
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Database Design for Disaster Risk Management in Antioquia} & \hfill \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{Capstone project of the Betek Data Analytics Bootcamp, presented at the company's Open House to an external audience. I designed the relational model in MySQL, conducted exploratory data analysis in Python, and built a Power BI dashboard covering the historical record of disasters and risk zones in the department of Antioquia.}  \\
+\end{tabularx}
+
 \section{Education}
-\begin{tabularx}{\linewidth}{@{}l X@{}}	
-2030 - present & PhD (Subject) at \textbf{University} \hfill \normalsize (GPA: 4.0/4.0) \\
-
-2023 - 2027 & Bachelor's Degree at \textbf{College} \hfill (GPA: 4.0/4.0) \\ 
-
-2022 & Class 12th Some Board \hfill  (Grades) \\
-
-2021 & Class 10th Some Board \hfill  (Grades) \\
+\begin{tabularx}{\linewidth}{@{}l X@{} l@{}}	
+Mar 2019 -- Mar 2026 & B.Sc. in Astronomy & \textbf{Universidad de Antioquia} \hfill \normalsize \\
 \end{tabularx}
 
-%----------------------------------------------------------------------------------------
-%	PUBLICATIONS
-%----------------------------------------------------------------------------------------
-\section{Publications}
-\begin{refsection}[citations.bib]
-\nocite{*}
-\printbibliography[heading=none]
-\end{refsection}
+\section{Continuing Education}
+\begin{tabularx}{\linewidth}{@{}l X@{} l@{}}
 
-%----------------------------------------------------------------------------------------
-%	SKILLS
-%----------------------------------------------------------------------------------------
-\section{Skills}
-\begin{tabularx}{\linewidth}{@{}l X@{}}
-Some Skills &  \normalsize{This, That, Some of this and that etc.}\\
-Some More Skills  &  \normalsize{Also some more of this, Some more that, And some of this and that etc.}\\  
+Oct 2024 -- Dec 2024 & Power BI and Data Visualization Course & 
+\textbf{Universidad de Antioquia} \hfill \normalsize \\
+
+Nov 2023 -- May 2024 & Data Analytics Bootcamp & \textbf{Betek} \hfill \normalsize \\
+
+Nov 2023 -- Feb 2024 & Diploma in Data Analysis and Machine Learning with Python & \textbf{Universidad de Antioquia} \hfill \normalsize \\
+
+Nov 2022 -- Dec 2022 & Fundamentals of Data Analytics & \textbf{DS4A} \hfill \normalsize \\
 \end{tabularx}
 
-\vfill
 \center{\footnotesize Last updated: \today}
 
 \end{document}
